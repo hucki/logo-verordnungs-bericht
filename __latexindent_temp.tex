@@ -1,0 +1,79 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\hypersetup{pdfauthor=Stefan Huckschlag, pdftitle=Verordnungs-Bericht, pdfsubject={Dokumentenvorlage gemäß Anhang A zu Anlage 1 zum Vertrag nach § 125 Absatz 1 SGB V: Verordnungs-Bericht, Bericht gemäß § 13 Absatz 2 lit. d, § 16 Absatz 7 HeilM-RL / § 11 Absatz 2 lit. c, § 15 Absatz 5 HeilM-RL ZÄ}, pdfkeywords={reich werden, Geld drucken}}
+\usepackage[absolute]{textpos}
+\setlength{\TPHorizModule}{1mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\setlength{\parindent}{0pt}
+\title{Verordnungs-Bericht}
+\def\cb#1{\CheckBox[%
+width=2.2mm,%
+height=2.2mm,%
+bordercolor=0 0 0,%
+charsize=2.1mm,%
+name=ch#1]{\rule{0mm}{0mm}}}
+\begin{document}
+  \begin{textblock}{1000}(0,40)
+    % \includegraphics[width=\paperwidth,trim=left bottom right top, clip]{20201214_Anlage_1_Anhang_A_Ergebnis.pdf}
+    \includegraphics[width=\paperwidth, trim=0 100 0 0, clip]{20201214_Anlage_1_Anhang_A_Ergebnis.pdf}
+  \end{textblock}
+  % \begin{Form}[action=mailto:info@example.com,encoding=html,method=post]
+  \begin{Form}
+    \begin{textblock}{1000}(26.4,92)
+      \TextField[%
+      width=75mm,%
+      height=30mm,%
+      multiline=true,%
+      align=0,%
+      bordercolor=1 1 1,%
+      borderwidth=0mm,%
+      charsize=0pt,%
+      name=txPerson]{\rule{0mm}{0mm}}
+    \end{textblock}
+    \begin{textblock}{1000}(26.4,134.4)
+      \cb{Fortfuehrung}
+    \end{textblock}
+    \begin{textblock}{1000}(26.4,140.4)
+      \cb{Therapiepause}
+    \end{textblock}
+    \begin{textblock}{1000}(26.4,146.4)
+      \cb{Beendigung}
+    \end{textblock}
+    \begin{textblock}{1000}(26.4,152.4)
+      \cb{Wiedervorstellung}
+    \end{textblock}
+    \begin{textblock}{1000}(66.4,149.9)
+      \TextField[%
+      width=20mm,%
+      height=4mm,%
+      multiline=false,%
+      align=1,%
+      bordercolor=1 1 1,%
+      borderwidth=0mm,%
+      charsize=0pt,%
+      name=txWiedervorstellungInWochen]{\rule{0mm}{0mm}}
+    \end{textblock}
+    \begin{textblock}{1000}(26.4,158.4)
+      \cb{andereTherapie}
+    \end{textblock}
+    \begin{textblock}{1000}(61.4,155.9)
+      \TextField[%
+      width=37mm,%
+      height=4mm,%
+      multiline=false,%
+      align=0,%
+      bordercolor=1 1 1,%
+      borderwidth=0mm,%
+      charsize=0pt,%
+      name=txWelcheAndereTherapie]{\rule{0mm}{0mm}}
+    \end{textblock}
+
+
+    % \begin{textblock}{1000}(26.4,200.4)
+      % \Acrobatmenu{Print}{Print}
+      % \Submit[export=html]{Submit}
+      % \Reset{Clear}
+    % \end{textblock}
+  \end{Form}
+\end{document}
