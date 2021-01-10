@@ -1,8 +1,10 @@
 \documentclass[12pt,a4paper]{article}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{pifont}
 \hypersetup{pdfauthor=Stefan Huckschlag, pdftitle=Verordnungs-Bericht, pdfsubject={Dokumentenvorlage gemäß Anhang A zu Anlage 1 zum Vertrag nach § 125 Absatz 1 SGB V: Verordnungs-Bericht, Bericht gemäß § 13 Absatz 2 lit. d, § 16 Absatz 7 HeilM-RL / § 11 Absatz 2 lit. c, § 15 Absatz 5 HeilM-RL ZÄ}, pdfkeywords={reich werden, Geld drucken}}
 \usepackage[absolute]{textpos}
+\thispagestyle{empty}
 \setlength{\TPHorizModule}{1mm}
 \setlength{\TPVertModule}{\TPHorizModule}
 \setlength{\parindent}{0pt}
@@ -10,13 +12,14 @@
 \def\cb#1{\CheckBox[%
 width=2.2mm,%
 height=2.2mm,%
+checkboxsymbol=5,%
 bordercolor=0 0 0,%
 charsize=2.1mm,%
 name=ch#1]{\rule{0mm}{0mm}}}
 \begin{document}
-  \begin{textblock}{1000}(0,40)
+  \begin{textblock}{1000}(0,70)
     % \includegraphics[width=\paperwidth,trim=left bottom right top, clip]{20201214_Anlage_1_Anhang_A_Ergebnis.pdf}
-    \includegraphics[width=\paperwidth, trim=0 100 0 0, clip]{20201214_Anlage_1_Anhang_A_Ergebnis.pdf}
+    \includegraphics[width=\paperwidth, trim=0 60mm 0 30mm, clip]{20201214_Anlage_1_Anhang_A_Ergebnis.pdf}
   \end{textblock}
   % \begin{Form}[action=mailto:info@example.com,encoding=html,method=post]
   \begin{Form}
@@ -36,7 +39,7 @@ name=ch#1]{\rule{0mm}{0mm}}}
     \begin{textblock}{1000}(141,85)
       \TextField[%
       width=40mm,%
-      height=4mm,%
+      height=5mm,%
       multiline=false,%
       align=1,%
       bordercolor=1 1 1,%
@@ -47,7 +50,7 @@ name=ch#1]{\rule{0mm}{0mm}}}
     \begin{textblock}{1000}(141,95.6)
       \TextField[%
       width=40mm,%
-      height=4mm,%
+      height=5mm,%
       multiline=false,%
       align=1,%
       bordercolor=1 1 1,%
@@ -154,10 +157,35 @@ name=ch#1]{\rule{0mm}{0mm}}}
   \begin{textblock}{1000}(106.2,158.4)
     \cb{Hausbesuch}
   \end{textblock}
-    % \begin{textblock}{1000}(26.4,200.4)
+% Begründung
+  \begin{textblock}{1000}(26.2,171.4)
+    \TextField[%
+    width=75mm,%
+    height=50mm,%
+    multiline=true,%
+    align=0,%
+    bordercolor=1 1 1,%
+    borderwidth=0mm,%
+    charsize=0pt, %
+    name=txBegruendung]{\rule{0mm}{0mm}}
+  \end{textblock}
+  \begin{textblock}{1000}(106.2,170)
+    \TextField[%
+    width=40mm,%
+    height=5mm,%
+    multiline=false,%
+    align=1,%
+    bordercolor=1 1 1,%
+    borderwidth=0mm,%
+    charsize=0pt,%
+    name=txDatumDesBerichts]{\rule{0mm}{0mm}}
+  \end{textblock}
+    \begin{textblock}{1000}(26.4,230.4)
+      \small{Bericht gemäß § 13 Absatz 2 lit. d, § 16 Absatz 7 HeilM-RL /\\
+             § 11 Absatz 2 lit. c, § 15 Absatz 5 HeilM-RL ZÄ}
       % \Acrobatmenu{Print}{Print}
       % \Submit[export=html]{Submit}
       % \Reset{Clear}
-    % \end{textblock}
+    \end{textblock}
   \end{Form}
 \end{document}
